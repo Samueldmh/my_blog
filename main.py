@@ -153,7 +153,7 @@ def show_post(post_id):
         db.session.commit()
     form = CommentForm()
 
-    return render_template("post.html", post=requested_post, form=form)
+    return render_template("post.html", post=requested_post, form=form, current_user=current_user)
 
 
 @app.route("/about")
